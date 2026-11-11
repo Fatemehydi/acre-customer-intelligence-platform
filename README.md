@@ -1,61 +1,133 @@
-ACRE – Customer Intelligence & Workflow Automation Platform
-
-ACRE is a modular customer intelligence and workflow automation platform designed to process e-commerce data, automate business workflows, and support data-driven customer engagement and decision-making.
-
-1. Problem Statement
-
-E-commerce businesses generate valuable customer and order data, but this information is often fragmented across different systems. ACRE aims to provide a modular architecture for collecting, processing, assessing, and utilizing this data to support customer engagement and business operations.
-
-2. Project Objectives
-
-- Integrate e-commerce data sources.
-- Automate data processing and business workflows.
-- Maintain structured customer and event data.
-- Assess customer behavior and purchase intent.
-- Support data-driven customer engagement decisions.
-- Provide an extensible architecture for future analytical capabilities.
-
-3. System Architecture
-
-ACRE is designed around four main components:
-
-WooCommerce – Data Source
-Provides e-commerce data, including customer interactions, orders, and relevant purchase information.
-
-n8n – Workflow Automation
-Coordinates data collection, processing, integration, and automated business workflows.
-
-Supabase – Data Storage
-Provides structured data storage for project information, events, assessments, and analytical results.
-
-Customer Intelligence & Assessment Engine
-Processes customer-related information and generates assessment results to support decision-making and customer engagement strategies.
-
-4. Key Functional Areas
-
-- E-commerce data integration
-- Workflow orchestration
-- Customer behavior assessment
-- Purchase intent assessment
-- Event tracking and logging
-- Customer engagement support
-- Analytical result management
-
 5. Development Status
 
-ACRE is under active development.
+ACRE is under active development. The platform follows a modular architecture, with development progressing across data integration, workflow automation, data storage, and customer assessment.
 
-The architecture and core functional areas are being documented and progressively implemented. Individual components and workflows will be documented as their implementation and testing are completed.
+| Component | Current Status |
+|---|---|
+| System architecture | Defined |
+| WooCommerce integration | Implementation status under review |
+| n8n workflow automation | Implementation status under review |
+| Supabase data storage | Initial database structures available |
+| Customer assessment engine | Initial assessment data model available |
+| Automated testing | Not yet documented |
+| Deployment documentation | Planned |
 
-6. Project Roadmap
+Implementation status will be updated as individual components are verified and tested.
 
-- Complete system architecture documentation
-- Document database schema and relationships
-- Implement and document WooCommerce integration
-- Develop n8n automation workflows
-- Implement customer assessment logic
-- Add validation and automated tests
-- Document deployment and configuration
-- Add technical examples and usage instructions
+6. Technical Implementation
 
-ACRE is an actively developed project. Its architecture, implementation, and technical documentation are maintained as part of the ongoing development process.
+ACRE is designed around four technical layers:
+
+6.1 Data Integration Layer
+
+Technology: WooCommerce
+
+Responsible for providing e-commerce data, including:
+- Customer information
+- Order information
+- Cart-related events
+- Purchase activity
+
+6.2 Workflow Orchestration Layer
+
+Technology: n8n
+
+Responsible for coordinating:
+- Data collection
+- Workflow execution
+- Data transformation
+- Integration between external services
+- Automated processing tasks
+
+6.3 Data Management Layer
+
+Technology: Supabase / PostgreSQL
+
+Responsible for storing structured information, including:
+- Project metadata
+- Customer-related events
+- Assessment records
+- Scoring results
+- Workflow execution outcomes
+
+6.4 Customer Intelligence Layer
+
+Responsible for evaluating customer-related signals and generating structured assessment results.
+
+The intended assessment capabilities include:
+- Purchase intent assessment
+- Customer behavior analysis
+- Cart recovery assessment
+- Decision-support information for customer engagement
+
+The assessment logic and scoring methodology will be documented separately as implementation progresses.
+
+7. Sample Data and Assessment Output
+
+ACRE uses structured assessment records to represent customer and cart-related evaluation results.
+
+The following is an illustrative example based on a test assessment record. It does not represent a real customer.
+
+| Field | Example |
+|---|---|
+| Assessment ID | TEST-CART-001 |
+| Intent Score | 78 |
+| Intent Level | VERY_HIGH |
+| Price Score | 65 |
+| Discount Score | 30 |
+| Trust Score | 20 |
+| Recovery Probability Score | Not populated |
+| Source Mode | test |
+| Model Version | v1 |
+| Assessment Status | READY_FOR_REVIEW |
+
+Interpretation:
+
+The example represents a test assessment with a high purchase-intent score. However, the recovery probability field has not yet been populated. Therefore, this record should not be interpreted as a completed recovery prediction.
+
+Future documentation will include the scoring methodology, field definitions, validation rules, and representative workflow outputs.
+
+8. Testing and Validation
+
+Testing and validation are important parts of the ACRE development process.
+
+The planned validation strategy includes:
+
+Data Validation
+- Verify required fields.
+- Validate data types and formats.
+- Identify missing or inconsistent values.
+- Prevent duplicate event processing where required.
+
+Workflow Validation
+- Verify successful workflow execution.
+- Validate data transfer between components.
+- Test error-handling scenarios.
+- Verify behavior when external services are unavailable.
+
+Assessment Validation
+- Validate scoring inputs and outputs.
+- Check score boundaries and assessment rules.
+- Identify missing assessment values.
+- Verify consistency between assessment status and generated results.
+
+Integration Testing
+- Test WooCommerce data integration.
+- Verify n8n processing and orchestration.
+- Validate Supabase data persistence.
+- Verify end-to-end data flow.
+
+Current Testing Status: Test data is available for initial assessment development. A complete automated testing suite and documented integration-test results are still to be established.
+
+9. Development Roadmap
+
+- [ ] Verify and document WooCommerce integration
+- [ ] Document n8n workflows and execution logic
+- [ ] Complete Supabase database schema documentation
+- [ ] Define assessment scoring methodology
+- [ ] Implement missing assessment fields
+- [ ] Add data validation rules
+- [ ] Develop automated unit and integration tests
+- [ ] Document error handling and recovery
+- [ ] Add representative end-to-end examples
+- [ ] Document deployment and configuration procedures
