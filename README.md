@@ -49,13 +49,13 @@ The architecture and core functional areas are being documented and progressivel
 
 6. Project Roadmap
 
-- [ ] Complete system architecture documentation
-- [ ] Document database schema and relationships
-- [ ] Implement and document WooCommerce integration
-- [ ] Develop n8n automation workflows
-- [ ] Implement customer assessment logic
-- [ ] Add validation and automated tests
-- [ ] Document deployment and configuration
-- [ ] Add technical examples and usage instructions
+- Complete system architecture documentation
+- Document database schema and relationships
+- Implement and document WooCommerce integration
+- Develop n8n automation workflows
+- Implement customer assessment logic
+- Add validation and automated tests
+- Document deployment and configuration
+- Add technical examples and usage instructions
 
 ACRE is an actively developed project. Its architecture, implementation, and technical documentation are maintained as part of the ongoing development process.
